@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "tailwindcss";
+
+@theme inline {
+  --font-inter: var(--font-inter);
+}
+body {
+    font-family: 'Inter', sans-serif;
+  }
