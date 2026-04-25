@@ -6,125 +6,87 @@ import Whatsapp from "./assets/Whatsapp.png";
 import Image2 from "./assets/Image2.png";
 import SoftwareInstaller from "./assets/SoftwareInstaller.png";
 
+const services = [
+  {
+    title: "Lead Generation",
+    desc: "Capture the contact information of potential customers in CRM",
+    icon: People,
+  },
+  {
+    title: "Get WhatsApp Message",
+    desc: "Receive messages from customers directly on WhatsApp",
+    icon: Whatsapp,
+  },
+  {
+    title: "Get New Calls",
+    desc: "Get direct calls from potential customers",
+    icon: Call,
+  },
+  {
+    title: "Get More Message",
+    desc: "Receive messages via Instagram / Facebook Messenger",
+    icon: Internet,
+  },
+  {
+    title: "Get Website Traffic",
+    desc: "Drive users to your website for more sales",
+    icon: Internet,
+  },
+  {
+    title: "App Install",
+    desc: "Increase installs on Play Store / App Store",
+    icon: SoftwareInstaller,
+  },
+];
+
 export default function SecondPage() {
   return (
-    <div className="services">
-      <h2>
-        Our <span>Services</span>
-      </h2>
+    <div className="w-full py-16 px-6">
 
-      <p>
-        VyralwithAI gives easy yet{" "}
-        <span className="highlight">
-          impactful digital advertising solutions
-        </span>{" "}
-        <br></br>
-        to help Indian businesses grow via digital ads.
-      </p>
+      {/* Heading */}
+      <div className="text-center max-w-[1500px] mx-auto " style={{ marginBottom: "2rem"}}>
+        <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: "1rem"}}>
+          Our <span className="text-blue-600">Services</span>
+        </h2>
 
-      <p className="paragraph">
-        At VyralwithAI, businesses can{" "}
-        <span className="highlight1">run ads with various objectives</span> -
-        such as
-      </p>
-      <div className="timeline">
-        {/* RIGHT - Lead Generation */}
-        <div className="timeline-row">
-          <div></div>
+        <p className="mt-4 text-gray-600">
+          VyralwithAI gives easy yet{" "}
+          <span className="font-semibold text-black">
+            impactful digital advertising solutions
+          </span>{" "}
+          to help Indian businesses grow.
+        </p>
 
-          <div className="icon">
-            <img src={People} alt="" />
-          </div>
-
-          <div className="card right">
-            <h3>Lead Generation</h3>
-            <p>Capture the contact information of potetial customers in CRM</p>
-          </div>
-        </div>
-
-        {/* LEFT - WhatsApp */}
-        <div className="timeline-row">
-          <div className="card left">
-            <h3>Get WhatsApp Message</h3>
-            <p>
-              Receive message from potential customers directly on your WhatsApp
-            </p>
-          </div>
-
-          <div className="icon">
-            <img src={Whatsapp} alt="" />
-          </div>
-
-          <div></div>
-        </div>
-
-        {/* RIGHT - Calls */}
-        <div className="timeline-row">
-          <div></div>
-
-          <div className="icon">
-            <img src={Call} alt="" />
-          </div>
-
-          <div className="card right">
-            <h3>Get New Calls</h3>
-            <p>
-              Get direct calls from potential customers interested in your
-              products or services
-            </p>
-          </div>
-        </div>
-
-        {/* LEFT - More Message */}
-        <div className="timeline-row">
-          <div className="card left">
-            <h3>Get More Message</h3>
-            <p>
-              Receive inquiry messages from customers through Instagram /
-              Facebook Messenger
-            </p>
-          </div>
-
-          <div className="icon">
-            <img src={Image2} alt="" />
-          </div>
-
-          <div></div>
-        </div>
-
-        {/* RIGHT - Website Traffic (WHITE CARD) */}
-        <div className="timeline-row">
-          <div></div>
-
-          <div className="icon">
-            <img src={Internet} alt="" />
-          </div>
-
-          <div className="card right white">
-            <h3>Get Website Traffic</h3>
-            <p>
-              Redirect potential customers to your website to drive online sales
-            </p>
-          </div>
-        </div>
-
-        {/* LEFT - App Install */}
-        <div className="timeline-row">
-          <div className="card left">
-            <h3>App Install</h3>
-            <p>
-              Get new installs on Play Store or App Store by targeting right
-              audience
-            </p>
-          </div>
-
-          <div className="icon">
-            <img src={SoftwareInstaller} alt="" />
-          </div>
-
-          <div></div>
-        </div>
+        <p className="mt-2 text-gray-600">
+          Run ads with various objectives like:
+        </p>
       </div>
+
+      {/* Services Grid */}
+     <div className="max-w-[1500px] mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12 justify-items-center">
+
+  {services.map((item, index) => (
+    <div
+      key={index}
+      className="bg-gray-100 rounded-2xl p-6 flex flex-col items-center text-center shadow hover:shadow-xl hover:-translate-y-2 duration-300 h-full w-full max-w-[350px] mx-auto" style={{ padding: "15px" }}
+    >
+      <img
+        src={item.icon}
+        alt={item.title}
+        className="w-16 h-16 mb-4"
+      />
+
+      <h3 className="text-lg font-semibold mb-2">
+        {item.title}
+      </h3>
+
+      <p className="text-sm text-gray-600">
+        {item.desc}
+      </p>
+    </div>
+  ))}
+
+</div>
     </div>
   );
 }
