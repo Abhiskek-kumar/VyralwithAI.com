@@ -22,9 +22,25 @@ const Contactus = () => (
         </p>
 
         <div className="contact-details">
-          <p><strong>📞 Phone:</strong> +91 9967377618</p>
-          <p><strong>📧 Email:</strong> contact@VyralAI.com</p>
-          <p><strong>📍 Address:</strong> Your Office Address Here</p>
+          <div className="contact-details text-sm space-y-2">
+            <p className="flex items-start">
+              <span className="font-semibold mr-2">📞 Phone: </span>
+              <span> +91 88060 31241, +91 79885 06110</span>
+            </p>
+
+            <p className="flex items-start">
+              <span className="font-semibold mr-2">📧 Email: </span>
+              <span> contact@vyralai.com</span>
+            </p>
+
+            <p className="flex items-start">
+              <span className="font-semibold mr-2">📍 Address: </span>
+              <span>
+                Plot No. 24, Rachana Society, Chinchbhawan,<br />
+                Nagpur, Maharashtra, India
+              </span>
+            </p>
+          </div>
         </div>
 
         <div className="social-buttons">
@@ -49,8 +65,7 @@ const Contactus = () => (
 
     <div className="map">
       <iframe
-
-        src="https://www.google.com/maps?q=Lalgarh%20Jattan,%20Sri%20Ganganagar,%20Rajasthan&output=embed"
+        src="https://www.google.com/maps?q=Chinchbhawan,%20Nagpur,%20Maharashtra,%20India&output=embed"
         className="w-full h-full border-0"
       ></iframe>
     </div>
